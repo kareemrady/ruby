@@ -74,7 +74,7 @@ def deck_hearts
 	x = (1..10)
 	x.each {|num| $deck_c<<num.to_s + "HB"}
 	x.each {|num| $deck_c<<num.to_s + "HR"}
-$deck_c
+$deck_h
 end
 
 
@@ -145,7 +145,7 @@ if user_input == "1"
 	player_result
 	
 		end
-
+puts "#{$player_name} ,your score is #{player_result}"
 end
 if player_result == dealer_result
 	puts "#{$player_name} You scored #{player_result} & the dealer scored #{dealer_result}" 
