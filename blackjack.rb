@@ -65,15 +65,15 @@ end
 
 def deck_clubs
 	x = (1..10)
-	x.each {|num| $deck_c<<num.to_s + "MB"}
-	x.each {|num| $deck_c<<num.to_s + "MR"}
+	x.each {|num| $deck_c<<num.to_s + "CB"}
+	x.each {|num| $deck_c<<num.to_s + "CR"}
 $deck_c
 end
 
 def deck_hearts
 	x = (1..10)
-	x.each {|num| $deck_c<<num.to_s + "MB"}
-	x.each {|num| $deck_c<<num.to_s + "MR"}
+	x.each {|num| $deck_c<<num.to_s + "HB"}
+	x.each {|num| $deck_c<<num.to_s + "HR"}
 $deck_c
 end
 
