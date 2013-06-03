@@ -161,13 +161,13 @@ play_again = gets.chomp
 unless play_again == "2"
 	game
 end
-puts "have a good day!"
+
 
 end
 
 game
 
-
+puts "have a good day!"
 
 	 	 
 
