@@ -114,7 +114,12 @@ if user_input == "1"
 	end
 	
 	# The dealer will "hit" till he reaches a result of 17
-		until dealer_result >= 17
+		
+
+	else 
+	player_result
+end
+until dealer_result >= 17
 		dealer_selection = deck[hit]
 		dealer_cards<<dealer_selection
 		deck.delete(dealer_selection)
@@ -140,22 +145,17 @@ if user_input == "1"
 			else
 				dealer_result
 			end
-		end
-
-	else 
-	player_result
-	dealer_result
-		
+		dealer_result
 	
 	
 end
 puts "#{$player_name} ,your score is #{player_result}"
 
 end
-	if player_result == 21 or dealer_result > 21
+	if player_result == 21 
 		puts "You WON !!! , You scored #{player_result} & the dealer scored #{dealer_result}"
 		
-	elsif player_result < dealer_result or player_result > 21 or dealer_result == 21
+	elsif player_result >dealer_result or player_result > 21 or dealer_result == 21
 		puts "Busted !!, You scored #{player_result} & the dealer scored #{dealer_result}.Better luck next time #{$player_name}"
 	else player_result == dealer_result
 	puts "#{$player_name} You scored #{player_result} & the dealer scored #{dealer_result}" 
