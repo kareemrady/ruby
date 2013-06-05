@@ -90,12 +90,10 @@ player_cards =[]
 player_result = 0
 dealer_result = 0
 dealer_cards = []
+hand = 0
+while hand < 2
 
-
-
-
-
-while player_result < 21
+if player_result < 21
 puts "Select one of the following options : 1) Hit 2) Stay "
 user_input = gets.chomp
 if user_input == "1"
@@ -189,26 +187,26 @@ puts "player score is #{player_result}"
  
 
 end
+hand +=1
+end
 puts "#{@player_name} ,your score is #{player_result}"
 
-if player_result == 21
-	
-		puts "You WON !!! , You scored #{player_result} & the dealer scored #{dealer_result}"
+if player_result == dealer_result
+		puts "#{@player_name} You scored #{player_result} & the dealer scored #{dealer_result}" 
+	puts "Draw"
 elsif dealer_result == 21
 		
 		puts "Busted !!, You scored #{player_result} & the dealer scored #{dealer_result}.Better luck next time #{@player_name}"
+elsif player_result == 21 or ((21 - player_result) < (21-dealer_result))
+	
+		puts "You WON !!! , You scored #{player_result} & the dealer scored #{dealer_result}"
 
-	elsif player_result == dealer_result
-		puts "#{@player_name} You scored #{player_result} & the dealer scored #{dealer_result}" 
-	puts "Draw"
-	elsif
-		player_result >dealer_result or  player_result > 21 
-		
+	else
+				
 		puts "Busted !!, You scored #{player_result} & the dealer scored #{dealer_result}.Better luck next time #{@player_name}"
 		
 	
 end
-
 
 
 	
