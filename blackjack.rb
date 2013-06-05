@@ -78,6 +78,7 @@ def deck_hearts
 end
 
 
+
 def game
 # using all the above functions to generate the full deck
 # initialize all variables and accumulators
@@ -127,21 +128,22 @@ if user_input == "1"
 	end
 			# if the dealer has a result of 17 or more the computer will randomly select one of the two options either "hit" or "stay"
 	
-	dealer_select = rand(2) + 1
-	if dealer_select == 1
+	else
+		dealer_select = rand(2) + 1
+		if dealer_select == 1
 		dealer_selection = deck[hit]
 		dealer_cards<<dealer_selection
 		deck.delete(dealer_selection)
 		value_of_card_dealer = dealer_selection.to_i
-	if value_of_card_dealer == 0
-		dealer_result += 10
-	else
-		dealer_result += value_of_card_dealer
+		if value_of_card_dealer == 0
+			dealer_result += 10
+		else
+			dealer_result += value_of_card_dealer
+		end
+		
+	    dealer_result
 	end
 		
-	        dealer_result
-	end
-	player_result	
 	dealer_result
 	
 end
@@ -192,14 +194,19 @@ puts "#{@player_name} ,your score is #{player_result}"
 if player_result == 21
 	
 		puts "You WON !!! , You scored #{player_result} & the dealer scored #{dealer_result}"
-		
-	elsif player_result >dealer_result or  player_result > 21 or dealer_result == 21
+elsif dealer_result == 21
 		
 		puts "Busted !!, You scored #{player_result} & the dealer scored #{dealer_result}.Better luck next time #{@player_name}"
-	else 
-		
-	puts "#{@player_name} You scored #{player_result} & the dealer scored #{dealer_result}" 
+
+	elsif player_result == dealer_result
+		puts "#{@player_name} You scored #{player_result} & the dealer scored #{dealer_result}" 
 	puts "Draw"
+	elsif
+		player_result >dealer_result or  player_result > 21 
+		
+		puts "Busted !!, You scored #{player_result} & the dealer scored #{dealer_result}.Better luck next time #{@player_name}"
+		
+	
 end
 
 
